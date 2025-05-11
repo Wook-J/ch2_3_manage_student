@@ -18,6 +18,32 @@ public class Student {
     this.activated = true;
   }
 
+//  public void setActivated(boolean activated) {
+//    if(activated && this.activated){
+//      throw new IllegalArgumentException();
+//    }
+//
+//    if(!activated && !this.activated){
+//      throw new IllegalArgumentException();
+//    }
+//    this.activated = activated;
+//    // 이대로 로직 구현하면 Exception 처리로 activate와 deactivate에 영향이 감
+//  }
+
+  public void activate(){
+    if(this.activated){
+      throw new IllegalArgumentException();
+    }
+    this.activated = true;
+  }
+
+  public void deactivate(){
+    if(!this.activated){
+      throw new IllegalArgumentException();
+    }
+    this.activated = false;
+  }
+
   public String getName() {
     return name;
   }
